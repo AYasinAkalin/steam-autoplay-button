@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Steam Autoplay Button is Checkmark",
+  "description": "No more cross! Display checkmark when 'Autoplay videos' is checked on Steam Store pages.",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "steam-autoplay-button@ayasinakalin"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://store.steampowered.com/app/*"],
+      "js": ["content-scripts/change-video-autoplay-button-background.js"]
+    }
+  ]
+}
